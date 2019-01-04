@@ -69,6 +69,7 @@ pipeline {
         git 'https://github.com/akkarapol/advdev_homework_template.git'
       }
     }
+    sh "chmod +x ./Infrastructure/bin"
     stage("Create Projects") {
       //when {
       //  environment name: 'SETUP', value: 'true'
