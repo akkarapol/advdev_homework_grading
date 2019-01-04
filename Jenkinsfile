@@ -68,14 +68,14 @@ pipeline {
         echo "Cloning Infrastructure Project"
         git 'https://github.com/akkarapol/advdev_homework_template.git'
       }
-    }
-    sh "chmod +x ./Infrastructure/bin/"
+    }    
     stage("Create Projects") {
       //when {
       //  environment name: 'SETUP', value: 'true'
       //}
       steps {
         echo "Creating Projects"
+        sh "chmod +x ./Infrastructure/bin/"
         sh "pwd"
         sh "ls"
         sh "./Infrastructure/bin/setup_projects.sh ${GUID} ${USER}"
