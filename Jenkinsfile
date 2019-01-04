@@ -80,9 +80,9 @@ pipeline {
     }
     stage("Setup Infrastructure") {
       failFast true
-      when {
-        environment name: 'SETUP', value: 'true'
-      }
+      //when {
+      //  environment name: 'SETUP', value: 'true'
+      //}
       parallel {
         stage("Setup Nexus") {
           steps {
@@ -118,12 +118,12 @@ pipeline {
     }
     stage("Reset Infrastructure") {
       failFast true
-      when {
-        environment name: 'SETUP', value: 'false'
-      }
-      steps {
-        sh "./Infrastructure/bin/reset_prod.sh ${GUID}"
-      }
+      //when {
+      //  environment name: 'SETUP', value: 'false'
+      //}
+      //steps {
+      //  sh "./Infrastructure/bin/reset_prod.sh ${GUID}"
+      //}
     }
     stage("First Pipeline Runs (from Green to Blue)") {
       failFast true
