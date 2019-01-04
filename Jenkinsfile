@@ -33,7 +33,7 @@
 GUID='a1'
 USER='admin'
 REPO='https://github.com/akkarapol/advdev_homework_template.git'
-CLUSTER='lb.inet.local:8443'
+CLUSTER='lb.inet.local'
 SETUP=true
 DELETE=true
 pipeline {
@@ -70,9 +70,9 @@ pipeline {
       }
     }
     stage("Create Projects") {
-      when {
-        environment name: 'SETUP', value: 'true'
-      }
+      //when {
+      //  environment name: 'SETUP', value: 'true'
+      //}
       steps {
         echo "Creating Projects"
         sh "./Infrastructure/bin/setup_projects.sh ${GUID} ${USER}"
