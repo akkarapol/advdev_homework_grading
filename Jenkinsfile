@@ -66,7 +66,7 @@ pipeline {
              "*******************************************************"
 
         echo "Cloning Infrastructure Project"
-        git '${REPO}'
+        git 'https://github.com/akkarapol/advdev_homework_template.git'
       }
     }
     stage("Create Projects") {
