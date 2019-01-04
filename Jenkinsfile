@@ -75,6 +75,8 @@ pipeline {
       //}
       steps {
         echo "Creating Projects"
+        sh "pwd"
+        sh "ls"
         sh "./Infrastructure/bin/setup_projects.sh ${GUID} ${USER}"
       }
     }
