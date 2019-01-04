@@ -75,9 +75,6 @@ pipeline {
       //}
       steps {
         echo "Creating Projects"
-        sh "chmod +x ./Infrastructure/bin/"
-        sh "pwd"
-        sh "ls"
         sh "./Infrastructure/bin/setup_projects.sh ${GUID} ${USER}"
       }
     }
