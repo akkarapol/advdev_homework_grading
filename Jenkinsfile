@@ -30,7 +30,12 @@
 //                            after a successful run.
 // * Use https://github.com/wkulhanek/advdev_homework_grading as the Git Repo
 //   and 'Jenkinsfile' as the Jenkinsfile.
-
+GUID='a1'
+USER='admin'
+REPO='https://github.com/akkarapol/advdev_homework_template.git'
+CLUSTER='lb.inet.local:8443'
+SETUP=true
+DELETE=true
 pipeline {
   agent {
     kubernetes {
