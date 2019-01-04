@@ -116,15 +116,15 @@ pipeline {
         }
       }
     }
-    stage("Reset Infrastructure") {
-      failFast true
+    //stage("Reset Infrastructure") {
+      //failFast true
       //when {
       //  environment name: 'SETUP', value: 'false'
       //}
       //steps {
       //  sh "./Infrastructure/bin/reset_prod.sh ${GUID}"
       //}
-    }
+    //}
     stage("First Pipeline Runs (from Green to Blue)") {
       failFast true
       parallel {
