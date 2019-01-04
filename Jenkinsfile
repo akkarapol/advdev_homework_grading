@@ -32,7 +32,7 @@
 //   and 'Jenkinsfile' as the Jenkinsfile.
 GUID='a1'
 USER='admin'
-REPO='https://github.com/akkarapol/adv_dev_hw.git'
+REPO='https://github.com/akkarapol/advdev_homework_template.git'
 CLUSTER='lb.inet.local'
 SETUP=true
 DELETE=true
@@ -66,7 +66,7 @@ pipeline {
              "*******************************************************"
 
         echo "Cloning Infrastructure Project"
-        git 'https://github.com/akkarapol/adv_dev_hw.git'
+        git 'https://github.com/akkarapol/advdev_homework_template.git'
       }
     }    
     stage("Create Projects") {
